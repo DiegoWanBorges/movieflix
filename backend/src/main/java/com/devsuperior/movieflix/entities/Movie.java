@@ -29,6 +29,7 @@ public class Movie implements Serializable {
 	@Column(columnDefinition = "TEXT")
 	private String synopsis;
 	
+	
 	@ManyToOne
 	@JoinColumn(name="genre_id")
 	private Genre genre;
