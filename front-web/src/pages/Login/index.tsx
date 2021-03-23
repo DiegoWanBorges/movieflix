@@ -1,8 +1,9 @@
 import './styles.scss'
-
 import { ReactComponent as LoginImage } from '../../core/assets/images/loginImage.svg'
 import LoginCard from './Components/LoginCard'
+
 const Login = () =>{
+    
     return (
         <div className="login-main">
             <div className="login-main-information"> 
@@ -16,9 +17,9 @@ const Login = () =>{
                     <LoginImage/>
                 </div>
             </div>
-            <div className="login-main-authenticate"> 
-                <LoginCard />
-            </div>
+            
+            <LoginCard />
+            
         </div>
     )
 }
