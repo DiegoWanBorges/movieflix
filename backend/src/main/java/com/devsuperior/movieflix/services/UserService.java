@@ -29,5 +29,5 @@ public class UserService implements UserDetailsService {
 		logger.info("Usuario encontrado: " + username);
 		return user;
 	}
-	
+		
 }

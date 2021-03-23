@@ -66,15 +66,12 @@ public class ReviewResourceIT {
 
 	@Test
 	public void insertShouldReturnUnauthorizedWhenNotValidToken() throws Exception {
-
 		String jsonBody = objectMapper.writeValueAsString(newReviewDTO);
-		
 		ResultActions result =
 				mockMvc.perform(post("/reviews")
 						.content(jsonBody)
 						.contentType(MediaType.APPLICATION_JSON)
 						.accept(MediaType.APPLICATION_JSON));
-
 		result.andExpect(status().isUnauthorized());
 	}
 	

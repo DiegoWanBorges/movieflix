@@ -31,6 +31,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	private JwtTokenStore tokenStore;
 	
 	private static final String[] PUBLIC = { "oauth/token","/h2-console/**" };
+	private static final String[] MEMBER = { "/reviews/**" };
 	
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
@@ -46,13 +47,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		}
 		
 		http.authorizeRequests()
-		.antMatchers(PUBLIC).permitAll()
-		.antMatchers(HttpMethod.POST, "MEMBER").permitAll()
-		.anyRequest().authenticated();
-		
+				.antMatchers(PUBLIC).permitAll()
+				.antMatchers(HttpMethod.POST, MEMBER).hasRole("MEMBER")
+				.anyRequest().authenticated();
 		http.cors().configurationSource(corsConfigurationSource());
-		
-		
 	}
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {

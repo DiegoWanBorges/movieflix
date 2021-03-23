@@ -65,7 +65,6 @@ public class GenreResourceIT {
 		ResultActions result =
 				mockMvc.perform(get("/genres")
 					.contentType(MediaType.APPLICATION_JSON));
-
 		result.andExpect(status().isUnauthorized());
 	}
 	

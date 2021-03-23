@@ -20,9 +20,9 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerConfigurer extends AuthorizationServerConfigurerAdapter {
 	
-	@Value("${secutity.oauth2.client.client-id}")
+	@Value("${security.oauth2.client.client-id}")
 	private String clientId;
-	@Value("${secutity.oauth2.client.client-secret}")
+	@Value("${security.oauth2.client.client-secret}")
 	private String clientSecret;
 	@Value("${jwt.duration}")
 	private Integer jwtDuration;
