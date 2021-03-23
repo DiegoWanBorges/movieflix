@@ -32,7 +32,7 @@ public class MovieService {
 	
 	@Transactional(readOnly=true)
 	public Page<MovieDTO> findAllPaged(Long genreId,PageRequest pageRequest){
-		Genre genre = (genreId==0) ? null : genreRepository.findById(genreId).get();
+		Genre genre = (genreId==0) ? null : genreRepository.getOne(genreId);
 		
 		Page<Movie> page = repository.find(genre,pageRequest);
 //		repository.find(page.stream().collect(Collectors.toList()));
