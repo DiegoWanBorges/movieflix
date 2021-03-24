@@ -38,7 +38,6 @@ export const getAccessTokenDecoded = () => {
     }
 }
 export const isTokenValid = () => {
-    console.log("IsTokenValid")
     const { exp } = getAccessTokenDecoded();
     if (Date.now() <= exp * 1000) {
         return true;
@@ -47,8 +46,6 @@ export const isTokenValid = () => {
 }
 export const isAuthenticated = () => {
     const sessionData = getSessionData();
-    console.log("IsAuth")
-    console.log(sessionData)
     return sessionData.access_token && isTokenValid();
 }
 
@@ -62,5 +59,5 @@ export const isAllowedByRole = (routeRoles: Role[] = []) => {
 
 export const logout = () => {
     localStorage.removeItem('authData')
-    history.replace('/auth/login')
+    history.replace('/')
 }

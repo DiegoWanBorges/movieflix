@@ -6,36 +6,45 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { makeLogin } from '../../../../core/utils/request'
 import { saveSessionData } from '../../../../core/utils/auth'
+import { useHistory, useLocation } from 'react-router'
 
 type FormState = {
     username: string;
     password: string;
 }
+type LocationState = {
+    from :string;
+}
+
 const LoginCard = () => {
     const [hidePassword, setHidePassword]=useState(false);
-    const [hasError, setHasError] = useState(false);
     const { register, handleSubmit, errors } = useForm<FormState>();
-
+    const history = useHistory();
+    const location = useLocation<LocationState>();
+    let { from } = location.state || { from: {pathname:"/movies"}};
+    
     const onSubmit = (data: FormState) => {
+        console.log(data)
         makeLogin(data)
                   .then(response => {
                     console.log(response)
-                    setHasError(false);
                     saveSessionData(response.data);
+                    history.replace(from);
                   })
                   .catch((erro)=>{
                       console.log(erro)
-                      setHasError(true);
                   })
         ;
     }
 
     return (
         <div className="card-login-main">
+           
             <h1 className="card-login-title">
                 LOGIN
            </h1>
-            <input
+           
+           <input
                 className="card-login-input"
                 type="text"
                 placeholder="Email"
@@ -61,29 +70,30 @@ const LoginCard = () => {
                 name="password"
                     ref={register({ required: "Campo obrigatório"})}
                     />
-                    {errors.password && (
-                    <div className="invalid-feedback d-block">
-                            {errors.password.message}
-                    </div>
-                    )}
             <button 
                 className="card-login-hide-password" 
                 onClick={() => setHidePassword(!hidePassword)}
             >
                 <img src={hidePassword ?  EyesClosed : EyesOpened} alt="" />
             </button>
+            {errors.password && (
+                    <div className="invalid-feedback d-block">
+                            {errors.password.message}
+                    </div>
+            )}
 
-            <div className="card-login-button">
+            <div className="card-login-btn-container">
                 <button 
-                    className="card-login-btn-icon"
+                    className="card-login-btn"
                     onClick={handleSubmit(onSubmit)}
                 >
                     LOGAR
                 </button>
-                <div className="card-login-btn-incon-content">
+                <div className="card-login-btn-incon-arrow">
                     <Arrow />
-                </div>
+                </div> 
             </div>
+
         </div>
     )
 }

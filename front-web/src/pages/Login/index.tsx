@@ -6,6 +6,7 @@ const Login = () =>{
     
     return (
         <div className="login-main">
+           
             <div className="login-main-information"> 
                 <h1 className="login-main-information-title">
                     Avalie Filmes
@@ -16,6 +17,7 @@ const Login = () =>{
                 <div className="login-main-image">
                     <LoginImage/>
                 </div>
+                
             </div>
             
             <LoginCard />

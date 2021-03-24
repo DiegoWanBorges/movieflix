@@ -1,10 +1,11 @@
 .card-login-main{
-    margin: 40px 40px 140px 40px ;
     width: 550px;
     background: #6C6C6C ;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     text-align: center !important;
+    align-items: center;
+    margin: 40px 40px 140px 40px ;
 }
 .card-login-title{
     font-weight: normal;
@@ -12,12 +13,11 @@
     line-height: 65px;
     letter-spacing: -0.015em;
     color: #FFFFFF;
-    padding-top: 100px;
-    margin-bottom: 85px;
+    padding: 100px 0 85px 0;    
 }
 .card-login-input{
     border-radius: 10px;
-    width: 80%;
+    width: 450px;
     height: 50px; 
     border: none; 
     font-style: normal;
@@ -26,31 +26,26 @@
     line-height: 25px;
     letter-spacing: -0.015em;
     color: #9E9E9E;
-    padding-left: 20px;
     outline: none;
+    padding-left: 20px;
 }
 .card-login-password{
     margin-top: 35px;
 }
 
-.card-login-button{
-    margin-top: 130px;
+.card-login-btn-container{
     display: flex;
-    padding-left: 40px;
-    width: 100%;
-    padding-bottom: 190px;
+    padding: 130px 50px 180px 50px;   
 }
-.card-login-btn-icon{
+.card-login-btn{
     background: #FFC700;
+    width: 84% ;
     height: 70px;
-    width: 380px;
     border-radius: 10px 0 0 10px;
     border: none;
-    text-transform: uppercase;
     font-weight: bold;
     font-size: 24px;
     line-height: 33px;
-    text-align: center;
     letter-spacing: -0.015em;
     color: #000000;
     outline: none;
@@ -59,9 +54,9 @@
         color: #FFF;
     }
 }
-.card-login-btn-incon-content{
+.card-login-btn-incon-arrow{
     background: #af8a03;
-    width: 70px;
+    width: 16%;
     border-radius: 0 10px 10px 0;
     display: flex;
     align-items: center;
@@ -75,4 +70,74 @@
     border: none;
     cursor: pointer;
     outline: none;
+}
+
+@media(max-width:768px){
+    
+}
+@media(max-width:576px){
+    .card-login-main{
+        width: 300px;
+        background: #6C6C6C ;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-align: center !important;
+        align-items: center;
+    }
+    .card-login-title{
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 65px;
+        letter-spacing: -0.015em;
+        color: #FFFFFF;
+        padding: 50px 0 30px 0;    
+    }
+    .card-login-input{
+        border-radius: 10px;
+        width: 250px;
+        height: 40px; 
+        border: none; 
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #9E9E9E;
+        outline: none;
+        padding-left: 10px;
+    }
+    .card-login-password{
+        margin-top: 25px;
+    }
+    
+    .card-login-btn-container{
+        display: flex;
+        padding: 75px 30px 70px 30px;   
+    }
+    .card-login-btn{
+        background: #FFC700;
+        width: 84% ;
+        height: 50px;
+        border-radius: 10px 0 0 10px;
+        border: none;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: -0.015em;
+        color: #000000;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            color: #FFF;
+        }
+    }
+    .card-login-btn-incon-arrow{
+        background: #af8a03;
+        width: 16%;
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+    } 
 }

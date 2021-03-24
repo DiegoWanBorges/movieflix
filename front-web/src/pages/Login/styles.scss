@@ -10,7 +10,6 @@
 }
 .login-main-information-title{
     margin: 75px 0 20px 0;
-    
     font-weight: bold;
     font-size: 55px;
     line-height: 75px;
@@ -29,4 +28,13 @@
     margin-top: 70px;
     width: 400px;
     height: 300px;
+    position: relative;
+}
+@media(max-width:768px){
+    .login-main-information{
+        display: none;
+    }
+}
+@media(max-width:576px){
+    
 }

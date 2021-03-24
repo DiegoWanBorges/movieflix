@@ -2,6 +2,7 @@ import { Route, Router, Switch } from 'react-router-dom'
 import NavBar from './core/components/NavBar';
 import history from './core/utils/history';
 import Login from './pages/Login'
+import Movies from './pages/Movies';
 
 
 const Routes = () => {
@@ -11,6 +12,9 @@ const Routes = () => {
             <Switch>
             <Route path="/" exact>
                 <Login/>
+            </Route>
+            <Route path="/movies" exact>
+                <Movies/>
             </Route>
         </Switch>
         </Router>
