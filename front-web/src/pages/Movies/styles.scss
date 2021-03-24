@@ -1,0 +1,12 @@
+.movie-main{
+    display: flex;
+    flex-direction: row;
+    background: #525252;   
+}
+.movie-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
