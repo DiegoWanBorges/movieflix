@@ -1,0 +1,46 @@
+.movie-filters-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 60px;
+    background: #6C6C6C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+.select-container{
+    width: 250px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 70%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    .movie-genre-select__control{
+        border-radius: 20px;
+        border-color: #FFF !important;
+        height: 50px;
+        background-color: #6C6C6C;
+               
+        ::backdrop{
+
+        }
+    }
+    
+    .movie-genre-select__indicator-separator{
+        display: none;
+    }
+    .movie-genre-select__dropdown-indicator{
+        color: #FFF;
+    }
+    .movie-genre-select__clear-indicator{
+        color: #FFF;
+    }
+    .movie-genre-select__placeholder{
+        color: #FFF;  
+    }
+    .movie-genre-select__single-value{
+        color: #FFF;
+    }
+}
+
