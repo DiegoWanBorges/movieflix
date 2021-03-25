@@ -16,7 +16,6 @@ axios.interceptors.response.use(function (response) {
     switch(error.response.status) { 
         case 401: { 
            logout();
-
            break; 
         } 
      }
