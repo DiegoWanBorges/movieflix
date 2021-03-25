@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Genre, MoviesResponse } from '../../core/types/Movie';
 import { makePrivateRequest } from '../../core/utils/request';
 import MovieCard from './Components/MovieCard'
@@ -42,7 +43,9 @@ const Movies = () => {
             <div className="movie-list">
                 {
                     moviesResponse?.content.map(movie => (
-                        <MovieCard movie={movie} />
+                        <Link to={`/movies/${movie.id}`} key={movie.id}>
+                            <MovieCard movie={movie} />
+                        </Link>
                     ))
                 }
             </div>

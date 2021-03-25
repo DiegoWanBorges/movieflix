@@ -25,7 +25,8 @@ export type Movie = {
     subTitle: string;
     year:number;
     imgUrl: string;
-    synopsis: string;
+    
+    synopsis:string;
     date:string;
     reviews: Review[];
 }

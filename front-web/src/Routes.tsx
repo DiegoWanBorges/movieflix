@@ -3,6 +3,7 @@ import NavBar from './core/components/NavBar';
 import history from './core/utils/history';
 import Login from './pages/Login'
 import Movies from './pages/Movies';
+import MoviewDetails from './pages/Movies/Components/MovieDetails';
 
 
 const Routes = () => {
@@ -15,6 +16,9 @@ const Routes = () => {
             </Route>
             <Route path="/movies" exact>
                 <Movies/>
+            </Route>
+            <Route path="/movies/:movieId">
+                <MoviewDetails />
             </Route>
         </Switch>
         </Router>
