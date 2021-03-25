@@ -1,6 +1,4 @@
 import './styles.scss'
-
-import { ReactComponent as MovieImg } from '../../../../core/assets/images/movie.svg'
 import { Movie } from '../../../../core/types/Movie'
 
 type Props ={

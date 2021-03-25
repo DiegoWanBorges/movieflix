@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { Movie } from '../../../../core/types/Movie';
 import { makePrivateRequest } from '../../../../core/utils/request';
 import MoviewDetailsInfo from '../MovieDetailsInfo';
+import MovieReviewCard from '../MovieReviewCard';
 import './styles.scss'
 
 type ParamsType = {
@@ -25,6 +26,8 @@ const MoviewDetails = () => {
     return (
         <div className="movie-details-main">
             <MoviewDetailsInfo movie={movie} />
+
+            <MovieReviewCard movieId={movie?.id} />
         </div >
 
     )
