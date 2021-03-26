@@ -9,7 +9,7 @@ const MoviewDetailsInfo = ({ movie }:Props) => {
 
     return (
         <div className="movie-details-main-info" >
-            <div className="movie-details-image-main">
+            <div className="movie-details-image-main"> 
                 <img 
                     src={movie?.imgUrl} 
                     alt={movie?.title} 
@@ -21,11 +21,9 @@ const MoviewDetailsInfo = ({ movie }:Props) => {
                 <h1 className="movie-details-text-title">{movie?.title}</h1>
                 <h3 className="movie-details-text-year">{movie?.year}</h3>
                 <h3 className="movie-details-text-subtitle">{movie?.subTitle}</h3>
-                <textarea  
-                    className="movie-details-text-synopsis"
-                    readOnly
-                    value={movie?.synopsis}
-                />
+                <div className="movie-details-text-synopsis" >
+                    {movie?.synopsis}
+                </div>  
                 
             </div> 
         </div>

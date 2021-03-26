@@ -43,7 +43,11 @@ const Movies = () => {
             <div className="movie-list">
                 {
                     moviesResponse?.content.map(movie => (
-                        <Link to={`/movies/${movie.id}`} key={movie.id}>
+                        <Link 
+                            to={`/movies/${movie.id}`} 
+                            key={movie.id}
+                            className="movie-list-iten"
+                        >
                             <MovieCard movie={movie} />
                         </Link>
                     ))

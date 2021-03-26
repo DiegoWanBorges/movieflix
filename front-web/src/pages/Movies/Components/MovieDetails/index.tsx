@@ -39,11 +39,21 @@ const MoviewDetails = () => {
             }
 
             <div className="movie-details-list">
+                
                 {
-                    movie?.reviews.map(review => (
-                        <MovieReviewList review={review} />
-                    )).sort((a, b) => 1 - 2)
+                    movie && (
+                        movie?.reviews.length > 0 ?
+                            (
+                                movie?.reviews.map(review => (
+                                    <MovieReviewList review={review} />
+                                )).sort((a, b) => 1 - 2)
+                            )
+                            : (<h3 className="movie-details-list-default">
+                                {isAllowedByRole(["ROLE_MEMBER"]) ? "Sejá o primeiro a avaliar!" : "Filme não possui avaliação!"}
+                            </h3>)
+                    )
                 }
+
 
             </div>
         </div >

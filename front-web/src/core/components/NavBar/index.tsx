@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
+import { NavLink } from 'react-router-dom';
+
 import { isTokenValid, logout } from '../../utils/auth';
 import './styles.scss'
 
@@ -18,9 +20,11 @@ const NavBar = () => {
 
     return (
         <nav className="nav-main">
-            <h1 className="nav-title">
-                MovieFlix
-            </h1>
+            
+                <NavLink to="/movies" className="nav-title">
+                    MovieFlix
+                </NavLink>
+            
             {
                 isAuth ? (
                     <button
