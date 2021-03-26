@@ -11,26 +11,23 @@ type FormState = {
     
 }
 const MovieReviewCard = ({ movieId }:Props) => {
-    const { register, handleSubmit, errors,setValue } = useForm<FormState>();
+    const { register, handleSubmit, errors } = useForm<FormState>();
     
     const onSubmit = (data: FormState) => {
         const payload ={
             ...data,
             movieId: movieId
         }
-        console.log(payload);
-        
         makePrivateRequest({
             url: `/reviews/`,
             method: 'POST',
             data: payload
         })
             .then(() => {
-                toast.success("Review salvo com sucesso!");
-                setValue("text","");
+                window.location.reload();
             })
-            .catch(() => {
-                toast.error("Erro ao salvar o review!");
+            .catch(e => {
+                toast.error("Falha ao salvar review")                
             })
     }
     return (
@@ -39,13 +36,15 @@ const MovieReviewCard = ({ movieId }:Props) => {
                 name="text"
                 ref={register({ 
                     required: "Campo obrigatório",
-                    minLength: { value: 5, message: "O campo deve ter minímo 5 caracteres" },
+                    minLength: { value: 10, message: "O campo deve ter minímo 10 caracteres" },
+                    validate: (value) => { return !!value.trim() || "Sua avaliação está em branco" }
                 })}
-                className={`movie-review-input ${errors.text ? 'is-isvalid' : ''}`} 
+                
+                className={`movie-review-input ${errors.text ? 'is-invalid' : ''}`} 
                 placeholder="Deixe sua avaliação aqui"
             />
             {errors.text && (
-                                <div className="invalid-feedback d-block">
+                                <div className="invalid-feedback-default d-block">
                                     {errors.text.message}
                                 </div>
             )}

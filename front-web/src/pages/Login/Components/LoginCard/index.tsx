@@ -17,6 +17,7 @@ type LocationState = {
 }
 
 const LoginCard = () => {
+    const [hasError, setHasError] = useState(false);
     const [hidePassword, setHidePassword]=useState(false);
     const { register, handleSubmit, errors } = useForm<FormState>();
     const history = useHistory();
@@ -29,10 +30,12 @@ const LoginCard = () => {
                   .then(response => {
                     console.log(response)
                     saveSessionData(response.data);
+                    setHasError(false)
                     history.replace(from);
                   })
                   .catch((erro)=>{
                       console.log(erro)
+                      setHasError(true)
                   })
         ;
     }
@@ -43,7 +46,13 @@ const LoginCard = () => {
             <h1 className="card-login-title">
                 LOGIN
            </h1>
-           
+
+           {hasError && (
+                    <div className="alert alert-warning">
+                        Usuário ou senha inválido!
+                    </div>
+            )}
+
            <input
                 className="card-login-input"
                 type="text"
@@ -58,7 +67,7 @@ const LoginCard = () => {
                   })}
                 />
                 {errors.username && (
-                <div className="invalid-feedback d-block">
+                <div className="invalid-feedback-default d-block">
                         {errors.username.message}
                 </div>
                 )}
@@ -77,7 +86,7 @@ const LoginCard = () => {
                 <img src={hidePassword ?  EyesClosed : EyesOpened} alt="" />
             </button>
             {errors.password && (
-                    <div className="invalid-feedback d-block">
+                    <div className="invalid-feedback-default d-block">
                             {errors.password.message}
                     </div>
             )}
