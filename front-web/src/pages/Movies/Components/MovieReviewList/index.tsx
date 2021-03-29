@@ -1,6 +1,6 @@
 import './styles.scss'
-import {  Review } from '../../../../core/types/Movie';
-import { ReactComponent as Star } from '../../../../core/assets/images/star.svg';
+import {  Review } from 'core/types/Movie';
+import { ReactComponent as Star } from 'core/assets/images/star.svg';
 
 
 type Props ={

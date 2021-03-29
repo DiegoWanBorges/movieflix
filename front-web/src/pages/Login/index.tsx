@@ -1,5 +1,5 @@
 import './styles.scss'
-import { ReactComponent as LoginImage } from '../../core/assets/images/loginImage.svg'
+import { ReactComponent as LoginImage } from 'core/assets/images/loginImage.svg'
 import LoginCard from './Components/LoginCard'
 
 const Login = () =>{

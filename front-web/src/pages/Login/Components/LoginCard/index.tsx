@@ -1,11 +1,11 @@
 import './styles.scss'
-import { ReactComponent as Arrow } from '../../../../core/assets/images/arrow.svg'
-import EyesOpened  from '../../../../core/assets/images/eyesOpened.png'
-import EyesClosed  from '../../../../core/assets/images/eyesClosed.png'
+import { ReactComponent as Arrow } from 'core/assets/images/arrow.svg'
+import EyesOpened  from 'core/assets/images/eyesOpened.png'
+import EyesClosed  from 'core/assets/images/eyesClosed.png'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { makeLogin } from '../../../../core/utils/request'
-import { saveSessionData } from '../../../../core/utils/auth'
+import { makeLogin } from 'core/utils/request'
+import { saveSessionData } from 'core/utils/auth'
 import { useHistory, useLocation } from 'react-router'
 
 type FormState = {

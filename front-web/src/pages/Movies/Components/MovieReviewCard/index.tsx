@@ -1,6 +1,6 @@
 import './styles.scss'
 import { useForm } from 'react-hook-form';
-import { makePrivateRequest } from '../../../../core/utils/request';
+import { makePrivateRequest } from 'core/utils/request';
 import { toast } from 'react-toastify';
 type Props ={
     movieId?: number;
