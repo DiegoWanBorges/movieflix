@@ -41,6 +41,69 @@ const navBar = StyleSheet.create({
         marginLeft:25,
     },
 })
+const home = StyleSheet.create({
+    main:{
+        flex:1,
+        backgroundColor:"#525252",
+        paddingTop:70,
+        alignItems:"center" 
+    },
+    title:{
+        paddingTop:30,
+        fontWeight: "bold",
+        fontSize: 26,
+        lineHeight: 35,
+        textAlign: "center",
+        letterSpacing: -0.015,
+        color: "#FFF",
+    },
+    image:{
+        width:340,
+        height:250,
+    },
+    subTitle:{
+        paddingTop:30,
+        fontWeight: "normal",
+        fontSize: 16,
+        lineHeight: 22,
+        textAlign: "center",
+        letterSpacing: -0.015,
+        color: "#F2F2F2",
+    },
+    loginButton:{
+        marginTop:30,
+        backgroundColor:"#FFC700",
+        width:290,
+        height:50,
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        borderRadius:10,
+        textAlign:"center",
+        
+    },
+    arrowContainer:{
+        backgroundColor:"#FFC700",
+        height:50,
+        width:50,
+        borderTopRightRadius:10,
+        borderBottomRightRadius:10,
+        justifyContent:"center",
+        alignItems:"center",
+    },
+    loginText:{
+        fontSize:14,
+        fontWeight:"bold",
+        color:"#000",
+        marginLeft:20,
+        
+    },
+    loginTextContent:{
+        flex:1,
+        justifyContent:"center",
+        alignItems:"center",
+    }
+    
+})
 
-
-export { navBar } 
+export { navBar, home } 
