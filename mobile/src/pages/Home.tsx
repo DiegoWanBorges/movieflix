@@ -3,8 +3,9 @@ import { Image, Text, TouchableOpacity, View } from "react-native"
 import { home } from '../styles';
 import HomeImg from '../assets/images/home.png'
 import arrow from '../assets/images/arrow.png';
+import { useNavigation } from '@react-navigation/native';
 const Home: React.FC = () => {
-    
+    const navigation = useNavigation();
     return (
         <View style={home.main}>
             <Image style={home.image} source={HomeImg} />
@@ -20,7 +21,7 @@ const Home: React.FC = () => {
             <TouchableOpacity
                                 style={home.loginButton}
                                 activeOpacity={0.8}
-                                // onPress={() => navigation.navigate('Catalog')}
+                                 onPress={() => navigation.navigate('Login')}
                                 >
                     <View style={home.loginTextContent}>
                         <Text style={home.loginText}>FAZER LOGIN</Text>
@@ -28,7 +29,10 @@ const Home: React.FC = () => {
                     
 
                     <View style={home.arrowContainer}>
-                        <Image source={arrow} /> 
+                        <Image 
+                            source={arrow} 
+                            style={home.arrowImage}
+                        /> 
                     </View>
             </TouchableOpacity>
         </View>

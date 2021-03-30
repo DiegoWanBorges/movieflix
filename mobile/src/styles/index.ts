@@ -83,13 +83,17 @@ const home = StyleSheet.create({
         
     },
     arrowContainer:{
-        backgroundColor:"#FFC700",
+        backgroundColor:"#937D1C",
         height:50,
         width:50,
         borderTopRightRadius:10,
         borderBottomRightRadius:10,
         justifyContent:"center",
         alignItems:"center",
+    },
+    arrowImage:{
+        width:8,
+        height:14,
     },
     loginText:{
         fontSize:14,
@@ -106,4 +110,43 @@ const home = StyleSheet.create({
     
 })
 
-export { navBar, home } 
+const login = StyleSheet.create({
+    main:{
+        flex:1,
+        backgroundColor:"#525252",
+        alignItems:"center",
+        paddingLeft:40,
+        paddingRight:40,
+    },
+    title:{
+        paddingTop:90,
+        paddingBottom:60,
+        fontWeight: "normal",
+        fontSize: 30,
+        lineHeight: 41,
+        textAlign: "center",
+        letterSpacing: -0.015,
+        color: "#FFF",
+    },
+    form:{
+        marginVertical:10,
+    },
+    input:{
+        width:290,
+        height:50,
+        borderWidth:1,
+        backgroundColor:"#FFF",
+        borderRadius:10,
+        padding:10
+    },
+    passwordGroup:{
+        flexDirection:"row",
+        alignItems:"center",
+        marginVertical:25
+    },
+    toggle:{
+        marginLeft:-40
+    },
+})
+
+export { navBar, home, login } 
