@@ -39,7 +39,6 @@ const Movies = () => {
         <div className="movie-main">
 
             <MovieFilter
-                genre={genre}
                 handleChangeGenre={handleChangeGenre}
             />
 

@@ -2,24 +2,30 @@ import React, { useEffect } from 'react'
 import { Image, Text, TouchableOpacity, View } from "react-native"
 import { useNavigation } from '@react-navigation/native';
 import { movieCard } from '../../../styles';
-import Movie from '../../../assets/images/movie.png'
-const MovieCard: React.FC = () => {
+import MovieImg from '../../../assets/images/movie.png'
+import { Movie} from '../../../utils/types';
+
+type Props={
+    movie:Movie;
+}
+
+const MovieCard: React.FC<Props> = ({movie}:Props) => {
     const navigation = useNavigation();
     return (
         <View style={movieCard.main}>
             <Image
                 style={movieCard.image}
-                source={Movie}
+                source={{uri:movie.imgUrl}}
             />
             <View style={movieCard.info}>
                 <Text style={movieCard.title}>
-                    O Retorno do Rei
+                    {movie.title}
                 </Text>
                 <Text style={movieCard.year}>
-                    2003
+                    {movie.year}
                 </Text>
                 <Text style={movieCard.subTitle}>
-                    O olho do inimigo está se movendo.
+                    {movie.subTitle}
                 </Text>
                 <TouchableOpacity style={movieCard.btnDetails}>
                     <Text style={movieCard.btnText}>

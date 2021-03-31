@@ -5,11 +5,10 @@ import { makePrivateRequest } from 'core/utils/request';
 import { Genre } from 'core/types/Movie';
 
 type Props ={
-    genre?:Genre;
     handleChangeGenre: (genre:Genre) => void;
 }
 
-const MovieFilter = ({ genre,handleChangeGenre }:Props) => {
+const MovieFilter = ({ handleChangeGenre }:Props) => {
     const [isLoadingGenres,setIsLoadingGenres] =useState(false);
     const [genres,setGenres] = useState<Genre[]>([ ]);
 

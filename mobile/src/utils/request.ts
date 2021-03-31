@@ -29,8 +29,8 @@ export const makeRequest =(params: AxiosRequestConfig) => {
     })
 }
 
-export const makePrivateRequest =(params: AxiosRequestConfig) => {
-    const sessionData = userToken();
+export async function makePrivateRequest (params: AxiosRequestConfig) {
+    const sessionData = await userToken();
     const headers ={
         Authorization: `Bearer ${sessionData}`
     }

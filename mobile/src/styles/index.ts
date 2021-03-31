@@ -172,8 +172,10 @@ const movieCard = StyleSheet.create({
         paddingTop: 20,
     },
     image:{
-        maxWidth:"100%",
-        maxHeight:"100%"
+        flex:1,
+        width:375,
+        height:227,
+        
     },
     info:{
         padding:15,
@@ -216,4 +218,33 @@ const movieCard = StyleSheet.create({
         color: "#FFF",
      }
 })
-export { navBar, home, login, movies, movieCard }
+const movieFilter = StyleSheet.create({
+    main:{
+        backgroundColor: "#6C6C6C",
+        borderRadius: 10,
+        shadowColor:"#000",
+        shadowOffset:{
+            width:0,
+            height:2,
+        },
+        shadowOpacity:0.25,
+        shadowRadius:3.84,
+        marginBottom:10,
+        paddingTop:14,
+        paddingLeft:20,
+        paddingRight:20,
+        paddingBottom:17,
+        
+    },
+    picker:{
+        height:40,
+        color:"#FFF",
+    },
+    pickerContainer:{
+        borderWidth:1,
+        borderColor:"#FFF",
+        borderRadius:10
+    }
+    
+})
+export { navBar, home, login, movies, movieCard, movieFilter }
