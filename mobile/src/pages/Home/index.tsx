@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from "react-native"
-import { home } from '../styles';
-import HomeImg from '../assets/images/home.png'
-import arrow from '../assets/images/arrow.png';
+import { home } from '../../styles';
+import HomeImg from '../../assets/images/home.png'
+import arrow from '../../assets/images/arrow.png';
 import { useNavigation } from '@react-navigation/native';
 const Home: React.FC = () => {
     const navigation = useNavigation();

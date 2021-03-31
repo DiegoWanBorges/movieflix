@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native"
-import { login,home } from '../styles';
-import arrow from '../assets/images/arrow.png';
-import eyesOpened from '../assets/images/eyes-opened.png'
-import eyesClosed from '../assets/images/eyes-closed.png'
+import { login,home } from '../../styles';
+import arrow from '../../assets/images/arrow.png';
+import eyesOpened from '../../assets/images/eyes-opened.png'
+import eyesClosed from '../../assets/images/eyes-closed.png'
 import { useNavigation } from '@react-navigation/native';
-import { makeLogin } from '../utils/request';
-import { saveSessionData } from '../utils/auth';
+import { makeLogin } from '../../utils/request';
+import { saveSessionData } from '../../utils/auth';
 const Login: React.FC = () => {
     const navigation = useNavigation();
     const [hidePassword, setHidePassword] = useState(false);

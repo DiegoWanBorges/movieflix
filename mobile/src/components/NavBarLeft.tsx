@@ -8,10 +8,6 @@ const NavBarLeft: React.FC = () => {
     const navigation = useNavigation();
     const route = useRoute();
 
-    useEffect(() =>{
-        console.log(route.name)
-    },[])
-
     function canGoBack(){
         const routes =["Home","Movies"];
        return !routes.includes(route.name)

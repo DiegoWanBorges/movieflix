@@ -91,17 +91,20 @@ public class MovieDTO   implements Serializable {
 		this.synopsis = synopsis;
 	}
 
+	public List<ReviewDTO> getReviews() {
+		return reviews;
+	}
 	
+	
+	
+
+
 	public GenreDTO getGenre() {
 		return genre;
 	}
 
 	public void setGenre(GenreDTO genre) {
 		this.genre = genre;
-	}
-
-	public List<ReviewDTO> getReviews() {
-		return reviews;
 	}
 
 	public Long getGenreId() {

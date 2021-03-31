@@ -1,12 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import { Text } from 'react-native';
 import NavBarLeft from '../components/NavBarLeft';
 import NavBarRight from '../components/NavBarRight';
-import Home from '../pages/Home';
-import { navBar } from '../styles';
-import Login from '../pages/Login';
-import Movies from '../pages/Movies';
+import { Home,Login,Movies } from '../pages';
+
 
 const Stack = createStackNavigator();
 
