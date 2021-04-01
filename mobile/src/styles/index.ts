@@ -254,13 +254,14 @@ const movieDetails = StyleSheet.create({
     main:{
         flex:1,
         backgroundColor: "#515151",
-        paddingTop:20,
-        paddingLeft:20,
-        paddingRight:20,
+        padding:20,
+        paddingVertical:15,
+        
     }
 })
 const movieDetailsInfo = StyleSheet.create({
     main:{
+        flex:1,
         backgroundColor: "#6C6C6C",
         borderRadius: 10,
         shadowColor:"#000",
@@ -270,7 +271,7 @@ const movieDetailsInfo = StyleSheet.create({
         },
         shadowOpacity:0.25,
         shadowRadius:3.84,
-        marginBottom:30,
+        paddingBottom:15,
     },
     title:{
         fontWeight: "bold",
@@ -331,4 +332,50 @@ const movieDetailsInfo = StyleSheet.create({
         color: "#9E9E9E",
     }
 })
-export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo }
+const movieReview = StyleSheet.create({
+    main:{
+        backgroundColor: "#6C6C6C",
+        borderRadius: 20,
+        shadowColor:"#000",
+        shadowOffset:{
+            width:0,
+            height:2,
+        },
+        shadowOpacity:0.25,
+        shadowRadius:3.84,
+        marginTop:20,
+        marginBottom:20,
+        padding:20,  
+    },
+    input:{
+        height:100,
+        backgroundColor:"#FFF",
+        paddingLeft:15,
+        paddingTop:10,
+        textAlignVertical:"top",
+        borderRadius: 10,
+        justifyContent:"space-between",
+        fontWeight: "normal",
+        fontSize: 16,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+        color: "#9E9E9E",
+    },
+    btn:{
+        marginTop:10,
+        borderRadius:10,
+        height:50,
+        backgroundColor:"#FFC700",
+    },
+    btnText:{
+        fontWeight: "bold",
+        fontSize: 16,
+        lineHeight: 22,
+        textAlign:"center",
+        justifyContent:"center",
+        letterSpacing: -0.015,
+        color: "#000",
+        paddingTop:15
+    }
+})
+export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo,movieReview }

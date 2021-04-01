@@ -48,6 +48,10 @@ const MovieReviewCard = ({ movieId }:Props) => {
                                     {errors.text.message}
                                 </div>
             )}
+
+            
+
+            
             <button
                 className="movie-review-btn"
                 onClick={handleSubmit(onSubmit)}

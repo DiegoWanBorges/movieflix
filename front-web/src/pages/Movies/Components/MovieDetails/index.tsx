@@ -34,6 +34,7 @@ const MoviewDetails = () => {
             {isLoading ? <MovieDetailLoader /> : (
                 <>
                     <MoviewDetailsInfo movie={movie} />
+                    
                     {isAllowedByRole(["ROLE_MEMBER"]) ?
                         (
                             <MovieReviewCard

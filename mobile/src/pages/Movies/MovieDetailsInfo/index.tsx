@@ -3,6 +3,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native"
 import { movieDetailsInfo } from '../../../styles';
 import { makePrivateRequest } from '../../../utils/request';
 import { Movie } from '../../../utils/types';
+import MovieReview from '../MovieReview';
 
 type Props={
     movie: Movie;
@@ -26,6 +27,7 @@ const MovieDetailsInfo: React.FC<Props> = ({movie}:Props) => {
                 </Text>
             </View>
         </View>
+
     )
 }
 
