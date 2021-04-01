@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Image, Text, TouchableOpacity, View } from "react-native"
-import { useNavigation, useRoute } from '@react-navigation/core';
+import { Text, TouchableOpacity, View } from "react-native"
+import { useNavigation} from '@react-navigation/core';
 import { navBar } from '../styles';
-import goBack from '../assets/images/goBack.png'
 import { isAuthenticated, doLogout } from '../utils/auth';
 
 const NavBarRight: React.FC = () => {
     const navigation = useNavigation();
-    const route = useRoute();
+    
     const [authenticated, setAuthenticated ] = useState(false)
 
 

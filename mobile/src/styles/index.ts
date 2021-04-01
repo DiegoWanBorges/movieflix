@@ -159,6 +159,7 @@ const movies = StyleSheet.create({
 })
 const movieCard = StyleSheet.create({
     main: {
+        width:"100%",
         backgroundColor: "#6C6C6C",
         borderRadius: 10,
         shadowColor:"#000",
@@ -170,12 +171,14 @@ const movieCard = StyleSheet.create({
         shadowRadius:3.84,
         marginBottom: 20,
         paddingTop: 20,
-    },
-    image:{
-        flex:1,
-        width:375,
-        height:227,
         
+        justifyContent:"space-around",
+    },
+    
+    image:{
+        width:"100%",
+        height:200,
+
     },
     info:{
         padding:15,
@@ -247,4 +250,85 @@ const movieFilter = StyleSheet.create({
     }
     
 })
-export { navBar, home, login, movies, movieCard, movieFilter }
+const movieDetails = StyleSheet.create({
+    main:{
+        flex:1,
+        backgroundColor: "#515151",
+        paddingTop:20,
+        paddingLeft:20,
+        paddingRight:20,
+    }
+})
+const movieDetailsInfo = StyleSheet.create({
+    main:{
+        backgroundColor: "#6C6C6C",
+        borderRadius: 10,
+        shadowColor:"#000",
+        shadowOffset:{
+            width:0,
+            height:2,
+        },
+        shadowOpacity:0.25,
+        shadowRadius:3.84,
+        marginBottom:30,
+    },
+    title:{
+        fontWeight: "bold",
+        fontSize: 24,
+        lineHeight: 33,
+        letterSpacing: -0.015,
+        color: "#FFF",
+        paddingTop:17,
+        paddingLeft:25,
+    },
+    image:{
+        height:200,
+        width:"100%",
+        marginTop:15,
+    },
+    year:{
+        paddingLeft:25,
+        marginTop:15,
+        fontWeight: "bold",
+        fontSize: 24,
+        lineHeight: 33,
+        letterSpacing: -0.015,
+        color: "#FFC700",
+    },
+    subTitle:{
+        paddingLeft:25,
+        fontWeight: "normal",
+        fontSize: 18,
+        lineHeight: 25,
+        letterSpacing: -0.015,
+        color: "#9E9E9E",
+    },
+    sinopse:{
+        marginTop:15,
+        paddingLeft:25,
+        fontWeight: "bold",
+        fontSize: 22,
+        lineHeight: 30,
+        letterSpacing: -0.015,
+        color: "#FFF",
+    },
+    sinopseContent:{
+        borderRadius:20,
+        borderWidth:1,
+        borderColor:"#E1E1E1",
+        textAlign:"justify",
+        marginTop:5,
+        marginLeft:20,
+        marginRight:20,
+    },
+    sinopseText:{
+        padding:20,
+        textAlign:"justify",
+        fontWeight: "normal",
+        fontSize: 16,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+        color: "#9E9E9E",
+    }
+})
+export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo }

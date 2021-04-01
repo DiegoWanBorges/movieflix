@@ -10,11 +10,8 @@ type Props = {
 }
 
 const MovieFilter: React.FC<Props> = ({ setIdGenre }: Props) => {
-    const [genres, setGenres] = useState<Genre[]>([{
-        id: 0,
-        name: "Selecione"
-    }]);
-    const [selected, setSelect] = useState(0);
+    const [genres, setGenres] = useState<Genre[]>([]);
+    const [selected, setSelect] = useState("");
     useEffect(() => {
         makePrivateRequest({ url: `/genres/` })
             .then(response => {
@@ -35,7 +32,7 @@ const MovieFilter: React.FC<Props> = ({ setIdGenre }: Props) => {
                 <Picker
                     selectedValue={""}
                     style={movieFilter.picker}
-                    onValueChange={(itemValue) => setIdGenre(itemValue)}
+                    onValueChange={(itemValue) => setSelect(itemValue)}
                 >
                     <Picker.Item key={0} label={"Selecione"} value={0} />
                     {
