@@ -271,7 +271,8 @@ const movieDetailsInfo = StyleSheet.create({
         },
         shadowOpacity:0.25,
         shadowRadius:3.84,
-        paddingBottom:15,
+        paddingBottom:20,
+        marginBottom:20,
     },
     title:{
         fontWeight: "bold",
@@ -343,7 +344,6 @@ const movieReview = StyleSheet.create({
         },
         shadowOpacity:0.25,
         shadowRadius:3.84,
-        marginTop:20,
         marginBottom:20,
         padding:20,  
     },
@@ -378,4 +378,64 @@ const movieReview = StyleSheet.create({
         paddingTop:15
     }
 })
-export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo,movieReview }
+const movieReviewList = StyleSheet.create({
+    main:{
+        backgroundColor: "#6C6C6C",
+        borderRadius: 20,
+        shadowColor:"#000",
+        shadowOffset:{
+            width:0,
+            height:2,
+        },
+        shadowOpacity:0.25,
+        shadowRadius:3.84,
+        flex:1,
+        marginBottom:50,
+        paddingLeft:20,
+        paddingRight:20,
+    },
+    title:{
+        fontWeight: "bold",
+        fontSize: 22,
+        lineHeight: 30,
+        letterSpacing: -0.015,
+        color: "#FFF", 
+        paddingTop:10,
+        paddingBottom:10,
+        
+    },
+    userInfo:{
+       flexDirection:"row",
+       alignItems:"baseline",
+       marginBottom:10,
+    },
+    image:{
+        width:12,
+        height:12,
+        marginLeft:20,
+        
+    },
+    userName:{
+        fontWeight: "bold",
+        fontSize: 16,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+        color: "#FFF",   
+        paddingLeft:10,
+    },
+    sinopsyContent:{
+        borderRadius:20,
+        borderWidth:1,
+        borderColor:"#E1E1E1",
+        marginBottom:15,
+        padding:15,
+    },
+    sinopsyText:{
+        fontWeight: "normal",
+        fontSize: 16,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+        color: "#9E9E9E", 
+    }
+})
+export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo,movieReview,movieReviewList }
