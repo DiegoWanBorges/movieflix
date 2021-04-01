@@ -1,13 +1,22 @@
+.movie-review-list-main{
+    margin-bottom: 10px;
+}
+.movie-review-list-info{
+    display: flex;
+    align-items: baseline;
+    padding-left: 15px;
+    
+}
 
 .movie-review-list-name{
+    display: flex;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.015em;
     color: #FFFFFF;
-    padding-left: 15px;
-    align-items: baseline;
-}
+    padding-left: 15px; 
+} 
 .movie-review-list{
     height: 50px;
     border: 1px solid #E1E1E1;

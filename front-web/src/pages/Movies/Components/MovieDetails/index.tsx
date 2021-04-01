@@ -54,7 +54,7 @@ const MoviewDetails = () => {
                                         )).sort((a, b) => 1 - 2)
                                     )
                                     : (<h3 className="movie-details-list-default">
-                                        {isAllowedByRole(["ROLE_MEMBER"]) ? "Sejá o primeiro a avaliar!" : "Filme não possui avaliação!"}
+                                        {isAllowedByRole(["ROLE_MEMBER"]) ? "Seja o primeiro a avaliar!" : "Filme não possui avaliação!"}
                                     </h3>)
                             )
                         }

@@ -11,6 +11,7 @@ type Props = {
 const MovieReviewList: React.FC<Props> = ({ review }: Props) => {
     return (
         <View>
+            
             <View style={movieReviewList.userInfo}>
                 <Image style={movieReviewList.image} source={Star} />
                 <Text style={movieReviewList.userName}>{review.user.name}</Text>

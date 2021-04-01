@@ -12,9 +12,11 @@ const MovieReviewList = ({ review }:Props) => {
     return (
         <div className="movie-review-list-main">
             
-            <div className="movie-review-list-name">
+            <div className="movie-review-list-info">
+
                 <Star className="movie-review-list-img"/>
                 <h3 className="movie-review-list-name">{review?.user.name}</h3>
+                
             </div>
 
             <div className="movie-review-list">

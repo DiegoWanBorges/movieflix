@@ -7,6 +7,7 @@ import eyesClosed from '../../assets/images/eyes-closed.png'
 import { useNavigation } from '@react-navigation/native';
 import { makeLogin } from '../../utils/request';
 import { saveSessionData } from '../../utils/auth';
+import Toast from 'react-native-tiny-toast';
 const Login: React.FC = () => {
     const navigation = useNavigation();
     const [hidePassword, setHidePassword] = useState(false);
@@ -26,7 +27,7 @@ const Login: React.FC = () => {
                  setLoggingIn(false)
              })
              .catch(response => {
-                 console.warn(response)
+                 Toast.show("Usuário ou senha invalidos!")
                  setLoggingIn(false)
              })
      }

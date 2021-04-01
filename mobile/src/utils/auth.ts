@@ -40,7 +40,6 @@ export async function isTokenValid (){
 export async function isAuthenticated() {
     try {
        const token = await userToken();
-       console.log(token ? true : false)
        return token ? true : false;
     } catch (error) {
        console.log(error)
@@ -57,7 +56,6 @@ export async function isAllowedByRole (routeRoles: Role[] = []) {
 
 export async function doLogout() {
     try {
-        console.log("removeu")
        await AsyncStorage.removeItem("token")
     } catch (error) {
        console.log(error)

@@ -3,7 +3,7 @@ import { TextInput, TouchableOpacity, View, Text } from "react-native"
 import { movieReview } from '../../../styles';
 import { makePrivateRequest } from '../../../utils/request';
 import { Movie } from '../../../utils/types';
-
+import Toast from 'react-native-tiny-toast';
 type Props={
     movie: Movie;
     setReview: Function;
@@ -14,6 +14,10 @@ const MovieReview: React.FC<Props> = ({movie,setReview}:Props) => {
     const [text,setText] =useState("");
 
     const onSubmit = () => {
+        if (text.trim() === ""){
+            Toast.show("A avaliação está em branco!")
+            return false;
+        }
         const payload ={
             text: text,
             movieId: movie.id
@@ -24,7 +28,9 @@ const MovieReview: React.FC<Props> = ({movie,setReview}:Props) => {
             data: payload
         })
             .then((response) => {
-                setReview(response.data)
+                setText("");
+                setReview(response.data);
+
             })
             .catch(e => {
                           

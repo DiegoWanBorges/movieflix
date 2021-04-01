@@ -48,7 +48,7 @@ const MovieDetails = ({ route: { params: { id } } }) => {
                         {movie.reviews.length > 0 ?
                             <Text style={movieReviewList.title} >Avaliações</Text>
                             :
-                            (<Text style={movieReviewList.title} >{canReview ? "Sejá o primeiro a avaliar!" : "Filme não possui avaliação!"}</Text>)
+                            (<Text style={movieReviewList.title} >{canReview ? "Seja o primeiro a avaliar!" : "Filme não possui avaliação!"}</Text>)
                         }
 
 

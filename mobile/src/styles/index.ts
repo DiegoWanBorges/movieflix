@@ -1,8 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native'
 
-const deviceWidth = Dimensions.get('window').width;
-const deviceHeight = Dimensions.get('window').height;
-
 const navBar = StyleSheet.create({
     main: {
         display: "flex",
@@ -410,8 +407,8 @@ const movieReviewList = StyleSheet.create({
        marginBottom:10,
     },
     image:{
-        width:12,
-        height:12,
+         width:12,
+         height:12,
         marginLeft:20,
         
     },
@@ -422,6 +419,7 @@ const movieReviewList = StyleSheet.create({
         letterSpacing: -0.015,
         color: "#FFF",   
         paddingLeft:10,
+        
     },
     sinopsyContent:{
         borderRadius:20,
