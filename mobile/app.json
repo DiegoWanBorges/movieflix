@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MovieFlix",
-    "slug": "mobile",
+    "slug": "mobileFlix",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,7 +18,6 @@
     ],
     "ios": {
       "bundleIdentifier":"com.movieflix",
-      "bluidNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
