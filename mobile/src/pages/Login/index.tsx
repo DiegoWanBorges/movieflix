@@ -19,9 +19,9 @@ const Login: React.FC = () => {
         }
     )
     async function handleLogin() {
+        setLoggingIn(true)
         await makeLogin(userInfo)
             .then(response => {
-                setLoggingIn(true)
                 saveSessionData(response.data.access_token);
                 navigation.navigate("Movies");
                 setLoggingIn(false)
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
             <Text style={login.title}>LOGIN</Text>
             {loggingIn ?
                 (
-                    <ActivityIndicator size="large" color="#FFC700" />
+                    <ActivityIndicator  size="large" color="#FFC700"  />
                 ) : (
                     <>
                         <View style={login.form}>

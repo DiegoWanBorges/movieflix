@@ -436,4 +436,5 @@ const movieReviewList = StyleSheet.create({
         color: "#9E9E9E", 
     }
 })
-export { navBar, home, login, movies, movieCard, movieFilter,movieDetails,movieDetailsInfo,movieReview,movieReviewList }
+export { navBar, home, login, movies, movieCard, 
+    movieFilter,movieDetails,movieDetailsInfo,movieReview,movieReviewList }
