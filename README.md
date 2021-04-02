@@ -4,7 +4,7 @@
 # Sobre o projeto
 
 
-[diegowanborges-movieflix.netlify.app](https://diegowanborges-movieflix.netlify.app "Aplicação em produção")
+[diegowanborges-movieflix.netlify.app](https://diegowanborges-movieflix.netlify.app "Site da aplicação")
 
 MovieFlix é uma aplicação full stack web e mobile desenvolvido para a conclusão do curso Bootcamp DevSuperior [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
