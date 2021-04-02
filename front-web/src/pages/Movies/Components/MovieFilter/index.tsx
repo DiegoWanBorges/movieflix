@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import { makePrivateRequest } from 'core/utils/request';
 import { Genre } from 'core/types/Movie';
 
-type Props ={
-    handleChangeGenre: (genre:Genre) => void;
+type Props = {
+    handleChangeGenre: (genre: Genre) => void;
 }
 
-const MovieFilter = ({ handleChangeGenre }:Props) => {
-    const [isLoadingGenres,setIsLoadingGenres] =useState(false);
-    const [genres,setGenres] = useState<Genre[]>([ ]);
+const MovieFilter = ({ handleChangeGenre }: Props) => {
+    const [isLoadingGenres, setIsLoadingGenres] = useState(false);
+    const [genres, setGenres] = useState<Genre[]>([]);
 
     useEffect(() => {
         setIsLoadingGenres(true);
@@ -18,29 +18,25 @@ const MovieFilter = ({ handleChangeGenre }:Props) => {
             .then(response => {
                 setGenres(response.data)
             })
-            .finally(() =>{
+            .finally(() => {
                 setIsLoadingGenres(false);
             })
     }, [])
-   
+
 
     return (
-        <div className="movie-filters-container">
-             <Select
-                name="genres"
-                isLoading={isLoadingGenres}
-                options={genres}
-                getOptionLabel={(option: Genre) => option.name}
-                getOptionValue={(option: Genre) => String(option.id)}
-                className="select-container"
-                classNamePrefix="movie-genre-select"
-                placeholder="Gêneros"
-                onChange={g => handleChangeGenre(g as Genre)}
-                isClearable
-            />
-           
-           
-        </div>
+        <Select
+            name="genres"
+            isLoading={isLoadingGenres}
+            options={genres}
+            getOptionLabel={(option: Genre) => option.name}
+            getOptionValue={(option: Genre) => String(option.id)}
+            className="select-container"
+            classNamePrefix="movie-genre-select"
+            placeholder="Gêneros"
+            onChange={g => handleChangeGenre(g as Genre)}
+            isClearable
+        />
     )
 }
 

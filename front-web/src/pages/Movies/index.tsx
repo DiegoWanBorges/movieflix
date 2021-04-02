@@ -22,10 +22,10 @@ const Movies = () => {
         }
         setIsloading(true);
         makePrivateRequest({ url: '/movies', params })
-        .then(response => setMoviesResponse(response.data))
-        .finally(() => {
+            .then(response => setMoviesResponse(response.data))
+            .finally(() => {
                 setIsloading(false);
-        })
+            })
     }, [genre, activePage])
 
     const handleChangeGenre = (genre: Genre) => {
@@ -37,23 +37,25 @@ const Movies = () => {
 
     return (
         <div className="movie-main">
-
-            <MovieFilter
-                handleChangeGenre={handleChangeGenre}
-            />
+           
+            <div className="movie-filters">
+                <MovieFilter
+                    handleChangeGenre={handleChangeGenre}
+                />
+            </div>
 
             <div className="movie-list">
                 {
-                    isLoading ? ( <MovieCardLoader/> ) :(
-                    moviesResponse?.content.map(movie => (
-                        <Link
-                            to={`/movies/${movie.id}`}
-                            key={movie.id}
-                            className="movie-list-iten"
-                        >
-                            <MovieCard movie={movie} />
-                        </Link>
-                    ))
+                    isLoading ? (<MovieCardLoader />) : (
+                        moviesResponse?.content.map(movie => (
+                            <Link
+                                to={`/movies/${movie.id}`}
+                                key={movie.id}
+                                className="movie-list-iten"
+                            >
+                                <MovieCard movie={movie} />
+                            </Link>
+                        ))
                     )
                 }
             </div>

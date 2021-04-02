@@ -11,7 +11,7 @@ const Movies: React.FC = () => {
     const [idGenre, setIdGenre] = useState(0);
     const [moviesResponse, setMoviesResponse] = useState<MoviesResponse>();
     const [isLoading, setIsLoading] = useState(false);
-    
+
     useEffect(() => {
         setIsLoading(true)
         const params = {
@@ -28,31 +28,23 @@ const Movies: React.FC = () => {
     useEffect(() => {
         BackHandler.addEventListener('hardwareBackPress', () => true)
         return () =>
-        BackHandler.removeEventListener('hardwareBackPress', () => true)
+            BackHandler.removeEventListener('hardwareBackPress', () => true)
     }, [])
 
-   
+
     return (
         <ScrollView style={movies.main}>
-             <MovieFilter
+            <MovieFilter
                 setIdGenre={setIdGenre}
             />
-            {isLoading ? 
-            (<ActivityIndicator size="large" color="#FFC700"/>)
-             :
-            (
-                
+            {isLoading ?
+                (<ActivityIndicator size="large" color="#FFC700" />)
+                :
+                (
                     moviesResponse?.content.map(movie => (
                         <MovieCard key={movie.id} movie={movie} />
                     ))
-                
-                
-            )}
-            
-           
-
-            
-           
+                )}
         </ScrollView>
     )
 }
