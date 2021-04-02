@@ -1,7 +1,7 @@
 import jwtDecode from "jwt-decode";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-export const CLIENTE_ID = 'movieflix';
-export const CLIENTE_SECRET =  'movieflix-xyz';
+export const CLIENTE_ID = process.env.REACT_APP_CLIENT_ID ?? 'movieflix';
+export const CLIENTE_SECRET = process.env.CLIENTE_SECRET ?? 'movieflix-xyz';
 
 
 export type Role = 'ROLE_VISITOR' | 'ROLE_MEMBER';
