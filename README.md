@@ -11,7 +11,12 @@ MovieFlix é uma aplicação full stack web e mobile desenvolvido para a conclus
 O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários.
 
 ## Layout mobile
-
+![Mobile 1](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile1.png) 
+![Mobile 2](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile2.png) 
+![Mobile 3](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile3.png)
+![Mobile 4](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile4.png)
+![Mobile 5](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile5.png)
+![Mobile 6](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/mobile/mobile6.png)
 
 ## Layout web
 ![Web 1](https://raw.githubusercontent.com/DiegoWanBorges/assets/main/movieFlix/web/web1.png)
