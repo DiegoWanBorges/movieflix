@@ -8,7 +8,7 @@ type  LoginData = {
     password:string;
 }
 
-const BASE_URL= process.env.REACT_APP_BACKEND_URL ?? "https://diegowanborges-movieflix.herokuapp.com";
+const BASE_URL= process.env.REACT_APP_BACKEND_URL ?? "http://192.168.18.29:8080 ";
 
 axios.interceptors.response.use(function (response) {
     return response;
