@@ -5,10 +5,13 @@ import MovieCard from './MovieCard';
 import MovieFilter from './MovieFilter';
 import { Genre, MoviesResponse } from '../../utils/types';
 import { makePrivateRequest } from '../../utils/request';
+import Pagination from '../../components/Pagination';
+
 const Movies: React.FC = () => {
     const [idGenre, setIdGenre] = useState(0);
     const [moviesResponse, setMoviesResponse] = useState<MoviesResponse>();
-
+    const [activePage, setActivePage] = useState(0);
+    
     useEffect(() => {
         const params = {
             linesPerPage: 1000,
@@ -39,6 +42,7 @@ const Movies: React.FC = () => {
                     <MovieCard key={movie.id} movie={movie} />
                 ))
             }
+           
         </ScrollView>
     )
 }

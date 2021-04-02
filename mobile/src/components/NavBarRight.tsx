@@ -17,7 +17,7 @@ const NavBarRight: React.FC = () => {
     function logout(){
         doLogout();
         setAuthenticated(false);
-        navigation.navigate("Login")
+        navigation.navigate("Home")
     }
     useEffect(() =>{
         logged();
