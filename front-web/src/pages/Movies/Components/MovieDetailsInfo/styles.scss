@@ -59,3 +59,16 @@
     resize: none;
     padding: 5px; 
 } 
+
+@media(max-width:960px){
+    .movie-details-main-info{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 10px !important;
+    }
+    .movie-details-text-synopsis{
+        height: 200px;
+    }
+
+}

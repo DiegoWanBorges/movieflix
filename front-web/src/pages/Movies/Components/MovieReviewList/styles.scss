@@ -18,11 +18,13 @@
     padding-left: 15px; 
 } 
 .movie-review-list{
-    height: 50px;
+    height: 70px;
     border: 1px solid #E1E1E1;
     box-sizing: border-box;
     border-radius: 20px;
     text-align: justify;
+    background: #6C6C6C;
+    width: 100%;
 }
 .movie-review-list-text{
     font-weight: normal;
@@ -30,7 +32,8 @@
     line-height: 22px;
     text-align: justify;
     letter-spacing: -0.015em;
-    color: #9E9E9E;
+    color:#9E9E9E;
     padding-top: 10px;
     padding-left: 18px;
+    
 }

@@ -14,7 +14,13 @@
     line-height: 22px;
     text-align: justify;
     letter-spacing: -0.015em;
-    color: #FFF;
+    color: #FFF; 
     padding-top: 10px;
     padding-left: 18px;
+}
+
+@media(max-width:576px){
+    .movie-details-main{
+        margin: 10px !important;
+    }
 }

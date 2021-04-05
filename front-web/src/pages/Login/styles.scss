@@ -30,11 +30,11 @@
     height: 300px;
     position: relative;
 }
-@media(max-width:768px){
+@media(max-width:1200px){
+    .login-main{
+        justify-content: center;
+    }
     .login-main-information{
         display: none;
     }
-}
-@media(max-width:576px){
-    
 }

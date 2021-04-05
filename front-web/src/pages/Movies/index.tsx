@@ -16,7 +16,7 @@ const Movies = () => {
     const [isLoading, setIsloading] = useState(false);
     useEffect(() => {
         const params = {
-            linesPerPage: 8,
+            linesPerPage: 12,
             genreId: genre?.id,
             page: activePage
         }

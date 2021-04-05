@@ -50,7 +50,7 @@ const MoviewDetails = () => {
                                 movie?.reviews.length > 0 ?
                                     (
                                         movie?.reviews.map(review => (
-                                            <MovieReviewList review={review} />
+                                            <MovieReviewList key={review.id} review={review} />
                                         )).sort((a, b) => 1 - 2)
                                     )
                                     : (<h3 className="movie-details-list-default">

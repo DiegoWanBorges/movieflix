@@ -21,9 +21,9 @@ const MoviewDetailsInfo = ({ movie }:Props) => {
                 <h1 className="movie-details-text-title">{movie?.title}</h1>
                 <h3 className="movie-details-text-year">{movie?.year}</h3>
                 <h3 className="movie-details-text-subtitle">{movie?.subTitle}</h3>
-                <div className="movie-details-text-synopsis" >
+                <textarea  className="movie-details-text-synopsis" >
                     {movie?.synopsis}
-                </div>  
+                </textarea>  
                 
             </div> 
         </div>

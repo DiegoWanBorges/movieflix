@@ -19,9 +19,14 @@ const MovieReviewList = ({ review }:Props) => {
                 
             </div>
 
-            <div className="movie-review-list">
-                <h3 className="movie-review-list-text"> {review?.text} </h3>
-            </div>
+            
+                <textarea 
+                        className="movie-review-list movie-review-list-text"> 
+                    
+                    {review?.text} 
+
+                </textarea>
+            
         </div>
     )
 }
