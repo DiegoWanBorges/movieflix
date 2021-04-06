@@ -30,8 +30,6 @@ const Movies: React.FC = () => {
         return () =>
             BackHandler.removeEventListener('hardwareBackPress', () => true)
     }, [])
-
-
     return (
         <ScrollView style={movies.main}>
             <MovieFilter
@@ -48,5 +46,4 @@ const Movies: React.FC = () => {
         </ScrollView>
     )
 }
-
 export default Movies

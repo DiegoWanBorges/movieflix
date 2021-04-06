@@ -234,16 +234,53 @@ const movieFilter = StyleSheet.create({
         paddingLeft:20,
         paddingRight:20,
         paddingBottom:17,
+        flexDirection:"row"
         
     },
     picker:{
         height:40,
-        color:"#FFF",
+        justifyContent:"center",
+        paddingLeft:17,
+        
+    },
+    pickerText:{
+        fontWeight: "normal",
+        fontSize: 16,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+        color: "#FFF", 
+        width:"80%"
+    },
+    pickerTextDropDownSelect:{
+        fontWeight:"bold",
+        color:"#FFC700",
+    },
+    pickerTextDropDownText:{
+        fontSize:16,
+        backgroundColor:"#6C6C6C",
+        color:"#FFF"
+    },
+    pickerDrop:{
+        width:"70%",
+        
+        
     },
     pickerContainer:{
+        flexDirection:"row",
         borderWidth:1,
         borderColor:"#FFF",
-        borderRadius:10
+        borderRadius:10,
+        alignItems:"baseline",
+        width:"100%",
+        
+    },
+    pickerClean:{
+        justifyContent:"center",
+        marginLeft:-35,
+        width:30,
+    },
+    pickerCleanText:{
+        color:"#FFF"
     }
     
 })
